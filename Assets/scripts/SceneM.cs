@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneM : MonoBehaviour
 {
-
+    private AudioSource audioSource;
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -19,6 +19,9 @@ public class SceneM : MonoBehaviour
     public void StartButton()
     {
         SceneManager.LoadScene("MainLevel");
+        audioSource = GetComponent<AudioSource>();
 
+        
+        audioSource.Play();
     }
 }
